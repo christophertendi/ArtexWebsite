@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PT. Artex Maju Sentosa</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+
+    <div class="header">
+      <!-- <h1 class="logo">ARtex</h1> -->
+      <img src="ARTEX Logo Transparent.PNG" alt="logo"/>
+      <input type="checkbox" id="chk">
+      <label for="chk" class="show-menu-button">
+          <i class="fas fa-ellipsis-h"></i>
+      </label>
+
+      <ul class="menu">
+          <a href="index.html">HOME</a>
+          <a href="produk.html">PRODUK</a>
+          <a href="tentangkami.html">TENTANG KAMI</a>
+          <a href="kontak.html">KONTAK</a>
+          <input type="checkbox" id="chk">
+          <label for="chk" class="hide-menu-button">
+              <i class="fas fa-times"></i>
+          </label>
+      </ul>
+
+      <br>
+
+      <div class = "companydetails">
+        <img src = "artex header@4x.png" alt="details"/>
+      </div>
+  </div>
+
+  <body>
+    <br><br><br><br><br><br>
+  <div class="artexform">
+    <h5>Kontak Kami</h5>
+    <p>Jika Anda membutuhkan informasi lain mengenai produk kami jangan ragu untuk mengirim pesan kepada kami</p>
+    <h7>Jam Operasional:<br></h7>
+    <p>Senin - Sabtu: 8.30 - 17.00 WIB</p>
+
+    <!-- <form action="test-koperasi-master\kontak.html"> -->
+    <form method="get" id="artex-form">
+      <!-- <form method="post" id="frmContact">
+        <p>
+            Name: <input type="text" name="fullname" id="fullname" required />
+        </p>   
+        <p>
+            Email: <input type="email" name="email" id="email" required />
+        </p>
+        <p>
+            Subject: <input type="text" name="subject" id="subject" />
+        </p>
+        <p>
+            Pesan: <textarea name="message" id="message" required></textarea>
+        </p>
+        <button type="button" name="submit">Submit</button>
+      </form> -->
+
+      <label for="name">Nama</label>
+      <input type="text" id="name" name="firstname" placeholder="Nama Anda" required />
+  
+      <label for="email">Email</label>
+      <input type="text" id="email" name="lastname" placeholder="Email Anda" required>
+
+      <label for="hp">No. HP</label>
+      <input type="text" id="hp" name="lastname" placeholder="No. HP" required>
+  
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject" required>
+        <option value="Pertanyaan">Pertanyaan Umum</option>
+        <option value="Keluhan">Keluhan</option>
+        <option value="Kritik">Kritik dan Saran</option>
+      </select>
+  
+      <label for="message">Pesan</label>
+      <textarea id="message" name="message" placeholder="Pesan Anda" style="height:200px" required></textarea>
+      
+      <!-- <input type="submit" value="Kirim Pesan"> -->
+      <button type = "button" name="submit" onclick="p">Submit</button>
+    </form>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.4.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+
+      // https://firebase.google.com/docs/web/setup#available-libraries
+    
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyBRiTp2ljn07vizkSTVfU1nO-zBXMKnrHc",
+        authDomain: "artex-form.firebaseapp.com",
+        projectId: "artex-form",
+        storageBucket: "artex-form.appspot.com",
+        messagingSenderId: "152874190598",
+        appId: "1:152874190598:web:dc75c878b805fa73b20087",
+        measurementId: "G-RKDS1VFKJC"
+      };
+    
+        // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+
+      //database 
+        const db = getDatabase(app);
+
+        document.getElementById('artex-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          set(ref(db, 'users/' + Math.random().toString(36).slice(2, 7)), {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            hp: document.getElementById('hp').value,
+            subject: document.getElementById('subject').value,
+            message: document.getElementById('message').value
+      });
+
+        alert('Your form is submitted');
+        document.getElementById('artex-form').reset();
+  });
+
+</script>
+</div>
+
+  <h6>Lokasi</h6> 
+
+  <div class = map>
+
+    <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:600px;height:500px;margin-top: 20px;align-items:center;padding-left: 70px;"><div id="canvas-for-googlemap" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=PT.+ARTEX+MAJU+SENTOSA+bahan+kaos,+Jl.+Sunter+Mas+Utara+C,+Sunter+Jaya,+North+Jakarta+City,+Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="our-googlemap-code" href="https://www.bootstrapskins.com/themes" id="grab-map-info">premium bootstrap themes</a></div>
+
+  </div>
+</div>
+
+  <div class="footer">
+    <img src="logo + kontak + alamat + copyright .png" alt="logo"/>
+  </div>
+
+  <div class = "whatsapp">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <a href="https://wa.me/whatsappphonenumber" class = "float" target="_blank">
+      <i class="fa fa-whatsapp my-float"></i>
+    </a>
+  </div>
+
+</html>
