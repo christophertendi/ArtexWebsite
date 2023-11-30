@@ -29,42 +29,53 @@
 
   }
 
-.companydetails img{
-  float:right;
-  justify-content: center;
-  width: 92vh;
-  height:auto;
-  padding-right: 27px;
-  padding-top:10px;
+/* .cdwrap{
   display: flex;
-}
-
+  align-items: center;
+  justify-content: right;
+  line-height: 100px;
+} */
 
 
 .logo {
-    line-height: 100px;
-    float: left;
-    transition: 0.4s;
-    cursor: pointer;
+  line-height: 100px;
+  float: left;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.menuwrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .menu {
-  position: fixed;
-  align-items: center;
-  /* text-align: center; */
   line-height: 100px;
-  padding-left: 30vh;
   
 }
-
 .menu a {
   text-align: center;
   text-decoration: none;
   color: #00000097;
-  padding: 10px 20px 10px 20px;
+  padding: 0 20px 0 20px;
   transition: 0.6s;
   font-size: 17px;
 }
+
+.cdwrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.cd{
+  padding-left: 20px;
+  font-weight: lighter;
+  font-size: 16px;
+}
+
 
 .show-menu-button,
 .hide-menu-button {
@@ -112,7 +123,7 @@
     }
 
     .menu a {
-        display: block;
+        display: flex;
     }
 
     .hide-menu-button {
@@ -131,10 +142,7 @@
     }
 
 .wrapper{
-
   text-align: center;
-
-
 }
 
 /* div.companydetails img{
@@ -221,7 +229,7 @@ div.scroll-container {
 
 div.scroll-container img {
   padding: 10px;
-  height: 60vh;
+  height: 50vh;
   width: auto;
   
 }
