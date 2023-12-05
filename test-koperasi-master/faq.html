@@ -16,25 +16,33 @@
           <i class="fas fa-ellipsis-h"></i>
       </label>
 
-      <ul class="menu">
+      <div class = "menuwrap">
+        <ul class="menu">
           <a href="index.html">HOME</a>
           <a href="produk.html">PRODUK</a>
-          <a href="tentangkami.html">TENTANG KAMI</a> 
+          <a href="tentangkami.html">TENTANG KAMI</a>
           <a href="kontak.html">KONTAK</a>
           <a href="faq.html">FAQ</a>
+          
           <input type="checkbox" id="chk">
           <label for="chk" class="hide-menu-button">
               <i class="fas fa-times"></i>
-          </label>
-      </ul>
-      <br>
-      <div class = "companydetails">
-        <img src = "artex header@4x.png" alt="details"/>     
+          </label>  
+        </ul>
+        
+        <div class ="cd">
+          <strong>Email: </strong>artexmajusentosa.textile@gmail.com<br>
+          <strong>Telephone: </strong>+62 811-952-1770<br>
+          <strong>Jam Operasional: </strong> Senin - Sabtu | 08.30 - 17.30
+        </div>
+
       </div>
-  </div>
 
-  
-
+      <!-- <div class="cdwrap">
+        
+      </div> -->
+      
+    </div>
 
   <br><br><br><br><br><br><br>
 
@@ -43,7 +51,7 @@
 
 
 
-  <div class = "mainwrap">
+  <!-- <div class = "mainwrap">
       <div class="wrap">
         <div class="search">
           <div class = "buttonwrap">
@@ -55,6 +63,24 @@
         </div>
     </div>
   </div>
+
+  <script>
+    function search_faq() {
+      let input = document.getElementById('search').value
+      input=input.toLowerCase(); 
+      let x = document.getElementsByClassName('faq-heading'); 
+
+      for (i = 0; i < x.length; i++) {  
+        if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+            x[i].style.display="none"; 
+        } 
+        else { 
+            x[i].style.display="faq";                  
+        } 
+      } 
+    } 
+  </script>
+   -->
 
   <div class='faq'>
 
@@ -69,7 +95,7 @@
     <label for='faq-b'>
       <p class="faq-heading">Apakah hari Minggu buka? Jam berapa toko tutup?</p>
       <div class='faq-arrow'></div>
-        <p class="faq-text">Mohon maaf hari Minggu kami tutup.<br><br>Berikut jam operasional kami: <br><strong>Senin - Sabu: 08.30 - 17.00</strong> </p>
+        <p class="faq-text">Mohon maaf hari Minggu kami tutup.<br><br>  Berikut jam operasional kami: <br><strong>Senin - Sabu: 08.30 - 17.00</strong> </p>
     </label>
 
     <input id='faq-c' type='checkbox'>
@@ -93,7 +119,6 @@
         <p class="faq-text">Lebar kain atau kebanyakan orang menyebutnya Setting-an kain merupakan lebar 1 Roll kain yang dibentangkan biasanya dalam satuan "Inch". Contohnya setting-an kain 34", 36", 38", 40" dan 42".</p>
     </label>
   
-
     <input id='faq-f' type='checkbox'>
     <label for='faq-f'>
       <p class="faq-heading">Apa yang dimaksud dengan gramasi?</p>
@@ -222,7 +247,7 @@
           -Fotokopi NPWP dan SPPKP<br>
           -Pengajuan faktur pajak hanya dapat dilakukan setelah kami melakukan penyerahan barang atau pengiriman<br>
           -Faktur pajak akan kami terbitkan paling lambat tanggal 15 pada bulan berikutnya<br>
-          -Pengajuan faktur   pajak selambat-lambatnya adalah 7 hari dari tanggal cetak invoice<br>
+          -Pengajuan faktur pajak selambat-lambatnya adalah 7 hari dari tanggal cetak invoice<br>
           -Faktur pajak akan dikirimkan ke email yang terdaftar pada sistem kami<br>
           -Customer diwajibkan untuk membuat nota retur atas pengembalian/ pembatalan pesanan sesuai dengan ketetapan pajak yang berlaku dan dikirimkan ke email artexmajusentosa.textile@gmail.com.
         </label>
